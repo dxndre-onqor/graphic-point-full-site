@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Our Work Page
- * Description: Page template Our Work page.
+ * Template Name: Our Work/Services Page
+ * Description: Page template Our Work & Our Services page.
  *
  */
 

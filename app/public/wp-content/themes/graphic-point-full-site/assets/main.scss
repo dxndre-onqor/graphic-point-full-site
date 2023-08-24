@@ -814,11 +814,94 @@ body {
 					margin-top: 100px;
 					text-align: center;
 
+					h2 {
+						font-size: 40px;
+					}
+
 					p {
 						&.lead {
 							font-size: 16px;
 						}
+					}		
+
+					.work-slides {
+						margin-top: 30px;
+						margin-bottom: 50px;
+						border-bottom: none;
+
+						ul {
+							&.nav {
+								border-bottom: none;
+								margin-bottom: 15px;
+
+								li.nav-item {
+									a.nav-link {
+										font-weight: 300;
+										padding: 0 20px;
+										margin: 20px 0;
+										color: white;
+										border: none;
+										border-right: 1px solid white;
+										border-radius: 0;
+
+										&:hover {
+										}
+
+										&.active {
+											background: transparent;
+											font-weight: 700;
+										}
+									}
+
+									&:last-of-type {
+										a {
+											border-right: none;
+										}
+									}
+								}
+							}
+						}
+
+						.flexslider {
+							img {
+								width: 100%;
+							}
+						}
+
+						.carousel-inner { 
+							height: 100%;
+							max-height: 800px;
+						}
+
+						.carousel-indicators {
+							li {
+								display: block;
+								padding: 5px;
+								border: 3px solid white;
+								border-radius: 100%;
+								margin: 0 5px;
+								transition: 0.3s all ease;
+
+								&.active {
+									background: white;
+									transition: 0.3s all ease;
+								}
+							}
+							
+						}
+
+						.carousel-fade .carousel-item {
+							opacity: 0;
+							transition: opacity 0.6s ease-in-out;
+						  }
+						  
+						  .carousel-fade .carousel-item.active {
+							opacity: 1;
+						  }
+
+						
 					}
+					
 				}
 
 			}

@@ -575,3 +575,14 @@ add_action( 'wp_enqueue_scripts', 'google_fonts' );
 add_image_size( 'full-HD', 1920 ); //, soft proportional crop mode
 add_image_size( 'standard-HD', 1280 ); //, soft proportional crop mode
 add_image_size( 'logo-carousel-HD', 720 ); //, soft proportional crop mode
+
+
+
+function enqueue_styles_and_scripts() {
+	
+	// Enqueue Bootstrap JS and Popper.js (required by Bootstrap)
+	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array('jquery'), null, true);
+	wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery', 'popper'), null, true);
+
+  }
+  add_action('wp_enqueue_scripts', 'enqueue_styles_and_scripts');
