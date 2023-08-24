@@ -25,12 +25,27 @@ if (have_rows('block_sections')) :
 
         // Case: Text & Media Section (for About Us page).
         if (get_row_layout() == 'text_and_media_section_about') : ?>
-            <?php include 'blocks/text-media.php'; ?>
+            <?php include 'blocks/text-media-about.php'; ?>
         <?php endif;
 
         // Case: Our Services Section.
         if (get_row_layout() == 'services_section') : ?>
             <?php include 'blocks/services.php'; ?>
+        <?php endif;
+
+        // Case: FAQ's Section.
+        if (get_row_layout() == 'faqs_section') : ?>
+            <?php include 'blocks/faqs.php'; ?>
+        <?php endif;
+
+        // Case: Contact Section.
+        if (get_row_layout() == 'contact_section') : ?>
+            <?php include 'blocks/contact.php'; ?>
+        <?php endif;
+
+        // Case: Our Work Section.
+        if (get_row_layout() == 'our_work_section') : ?>
+            <?php include 'blocks/our-work.php'; ?>
         <?php endif;
 
     // End loop.

@@ -544,8 +544,9 @@ body {
 				&.text-media {
 					
 					.text-media-content {
-						margin: 105px 0;
+						margin: 105px auto;
 						display: flex;
+						max-width: 1200px;
 
 						.image-side,
 						.text-side {
@@ -581,6 +582,37 @@ body {
 									font-style: normal;
 									font-weight: 300;
 									line-height: normal;
+								}
+							}
+						}
+					}
+
+					&.about {
+						.text-media-content {
+							margin: 0 auto;
+							padding: 40px 0;
+							justify-content: center;
+
+							.image-side {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								max-width: 175px;
+
+								img {
+									width: 100%;
+									max-width: 100px;
+									margin: 0 15px;
+								}
+							}
+
+							.text-side {
+								width: auto;
+
+								.text-container {
+									padding: 0;
+									max-width: none;
+									margin: 0;
 								}
 							}
 						}
@@ -659,6 +691,132 @@ body {
 							font-weight: 300;
 							line-height: normal;
 							max-width: 600px;
+						}
+					}
+				}
+
+				&.faqs {
+					margin: 40px auto;
+
+					.text-area {
+						h2 {
+							text-align: center;
+							margin-bottom: 25px;
+						}
+					}
+					.accordion-item {
+						background: transparent;
+
+						.accordion-header {
+							background: transparent;
+							border-bottom: 3px solid white;
+						}
+
+						button {
+							background: transparent;
+							color: white;
+							padding: 25px 0;
+
+							&::after {
+								filter: brightness(10) saturate(0);
+								margin-right: 25px;
+							}
+						}
+
+						.accordion-body {
+							p {
+								color: white;
+								font-weight: 300;
+							}
+						}
+					}
+				}
+
+				&.get-in-touch {
+					text-align: center;
+					max-width: 768px;
+					margin: 100px auto;
+					margin-bottom: 50px;
+
+					h2 {
+						font-weight: 700;
+					}
+
+					p {
+						&.lead {
+							font-size: 16px;
+						}
+					}
+
+					hr {
+						border: 2px solid white;
+						opacity: 1;
+					}
+
+					.contact-stats {
+						a {
+							color: white;
+							font-weight: 300;
+
+							img {
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+
+				&.contact {
+					width: 100%;
+					max-width: 768px;
+					margin: 0 auto;
+
+					form {
+						width: 100%;
+						max-width: 768px;
+						text-align: center;
+
+						select {
+							width: 300px;
+							padding: 5px;
+						}
+
+						label {
+							width: 100%;
+							font-size: 12px;
+							text-align: left;
+
+							input,
+							textarea {
+								background: transparent;
+								color: white;
+								border: 1px solid white;
+								width: 100%;
+								padding: 5px;
+								margin-top: 5px;
+								font-weight: 300;
+								font-size: 18px;
+							}
+
+						}
+
+						.wpcf7-submit{
+							display: block;
+							margin: 0 auto;
+							padding: 5px 20px;
+							background: white;
+							margin-top: 30px;
+						}
+
+					}
+				}
+
+				&.our-work {
+					margin-top: 100px;
+					text-align: center;
+
+					p {
+						&.lead {
+							font-size: 16px;
 						}
 					}
 				}
