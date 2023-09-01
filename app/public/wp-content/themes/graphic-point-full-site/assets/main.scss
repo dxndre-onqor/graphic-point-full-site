@@ -871,6 +871,38 @@ body {
 						.carousel-inner { 
 							height: 100%;
 							max-height: 800px;
+
+							.carousel-item {
+								max-height: 800px;
+
+								.carousel-caption {
+									background: $black;
+									width: 100%;
+									max-width: 700px;
+									padding: 25px 50px;
+									bottom: 50px;
+									margin: 0 auto;
+
+									h5 {
+										font-size: 22px;
+										margin-bottom: 15px;
+
+										&::after {
+											content: '.';
+											color: $yellow;
+											display: inline-block;
+										}
+									}
+
+									p {
+										font-size: 15px;
+										font-style: normal;
+										font-weight: 300;
+										line-height: normal;
+										margin-bottom: 0;
+									}
+								}
+							}
 						}
 
 						.carousel-indicators {
@@ -898,10 +930,264 @@ body {
 						  .carousel-fade .carousel-item.active {
 							opacity: 1;
 						  }
-
 						
 					}
 					
+				}
+
+				&.submit-artwork-intro {
+					margin-top: 100px;
+					text-align: center;
+
+					h2 p {
+						font-weight: 700;
+					}
+
+					h3 {
+						margin: 100px auto;
+						font-size: 22px;
+					}
+
+					p {
+						font-weight: 300;
+
+						a {
+							color: white;
+							font-weight: 600;
+							border-bottom: 1px solid white;
+						}
+					}
+					ul {
+						padding: 0;
+
+						&.checklist {
+							list-style: none;
+
+							li {
+								&.checklist-item {
+									.img-holder {
+										height: 100px;
+										display: block;
+										margin-bottom: 25px;
+									}
+
+									.text-holder {
+										border-right: 3px solid white;
+										padding: 0 30px;
+
+										p {
+											font-size: 15px;
+											line-height: normal;
+											width: 100%;
+											max-width: 300px;
+											margin: 0 auto;
+										}
+									}
+								}
+
+								&:last-of-type {
+									.text-holder {
+										border-right: none;
+									}
+								}
+							}
+						}
+					}
+					
+				}
+
+				&.submit-artwork-form {
+					margin: 0 auto;
+					max-width: 768px;
+					width: 100%;
+
+					form {
+						width: 100%;
+						margin-top: 75px;
+
+						label {
+							width: 100%;
+							font-size: 12px;
+							text-align: left;
+						}
+
+						span {
+							input {
+								&[type="text"],
+								&[type="email"],
+								&[type="textarea"] {
+									background: transparent;
+									border: 1px solid #fff;
+									color: #fff;
+									font-size: 18px;
+									font-weight: 300;
+									margin-top: 5px;
+									padding: 5px;
+									width: 100%;
+								}
+							}
+
+							textarea {
+								background: transparent;
+								border: 1px solid #fff;
+								color: #fff;
+								font-size: 18px;
+								font-weight: 300;
+								margin-top: 5px;
+								padding: 5px;
+								width: 100%;
+							}
+
+							.wpcf7-not-valid-tip {
+								margin-top: 10px;
+							}
+						}
+
+						p {
+							span {
+								&.form-info {
+									font-weight: 300;
+									font-size: 15px;
+
+									a {
+										color: white;
+										font-weight: 700;
+										border-bottom: 1px solid white;
+									}
+								}
+							}
+
+							.wpcf7-file {
+								// padding: 8px 30px;
+								// border: 2px solid $yellow;
+								margin-top: 10px;
+							}
+
+							.wpcf7-submit {
+								background: #fff;
+								color: #000;
+								padding: 8px 30px;
+							}
+						}
+					}
+				}
+
+				&.our-work-examples {
+					margin: 100px auto;
+
+					h2 {
+						text-align: center;
+					}
+
+					#gallery-carousel {
+						margin-top: 50px;
+
+						.carousel-inner {
+							height: 100%;
+							max-height: 500px;
+							
+							.carousel-item {
+								img {
+									width: 100%;
+								}
+							}
+						}
+
+						.carousel-indicators {
+							li {
+								display: block;
+								padding: 5px;
+								border: 3px solid white;
+								border-radius: 100%;
+								margin: 0 5px;
+								transition: 0.3s all ease;
+
+								&.active {
+									background: white;
+									transition: 0.3s all ease;
+								}
+							}
+							
+						}
+
+						&.carousel-fade {
+							.carousel-item {
+								opacity: 0;
+								transition: opacity 0.5s ease-in-out;
+							}
+							.carousel-item.active {
+								opacity: 1;
+							}
+						}
+					}
+				}
+
+				&.legal-tabs {
+					.tabbed-panels {
+						padding: 20px;
+					
+						// Tabs list
+						.legal-tab-list {
+							list-style: none;
+							padding: 0;
+							margin: 100px auto;
+							display: flex;
+					
+							// Tab list item
+							li {
+								width: 100%;
+								text-align: center;
+								max-width: 175px;
+								border-right: 1px solid white;
+
+								&:last-of-type {
+									border-right: 0;
+								}
+					
+								// Tab link styles
+								a {
+									color: white;
+									font-weight: 400;
+									text-decoration: none;
+									padding: 0 15px;
+									transition: background-color 0.3s, color 0.3s;
+					
+									&:hover {
+										// background-color: #333;
+									}
+								}
+					
+								// Active tab styles
+								&.active {
+									a {
+										color: #fff;
+										font-weight: 700;
+									}
+								}
+							}
+						}
+					
+						// Tab content styles
+						.tab-content {
+							display: none;
+							padding: 15px;
+							border-top: none;
+					
+							&.active {
+								display: block;
+							}
+
+							p {
+								font-weight: 300;
+								line-height: normal;
+							}
+
+							h2, h3 {
+								margin: 1em 0;
+								margin-top: 1.5em;
+							}
+						}
+					}
 				}
 
 			}

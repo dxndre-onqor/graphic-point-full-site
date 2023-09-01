@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Submit Artwork Page
- * Description: Page template Submit Artwork Page
+ * Template Name: Legal Page
+ * Description: Page template Legal Page (for Privacy Policy, Cookies Policy and Terms of Service)
  *
  */
 
@@ -30,9 +30,6 @@ the_post();
 			'</span>'
 		);
 	?>
-
-<?php include('blocks/work-examples.php'); ?>
-
 </div><!-- /#post-<?php the_ID(); ?> -->
 <?php
 	// If comments are open or we have at least one comment, load up the comment template.

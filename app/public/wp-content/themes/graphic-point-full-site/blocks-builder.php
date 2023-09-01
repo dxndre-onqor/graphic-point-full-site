@@ -48,6 +48,24 @@ if (have_rows('block_sections')) :
             <?php include 'blocks/our-work.php'; ?>
         <?php endif;
 
+        // Case: Submit Artwork Intro Section.
+        if (get_row_layout() == 'submit_artwork_intro') : ?>
+            <?php include 'blocks/submit-artwork-intro.php'; ?>
+        <?php endif;
+
+        // Case: Work Examples Section (for Submit Artwork page).
+        /* 
+        if (get_row_layout() == 'work_examples_submit_artwork') : ?>
+            <?php include 'blocks/work-examples.php'; ?>
+        <?php endif;
+        */
+        // NOTE: The Work Examples Section is disabled in this docuemnt as this section follows the main 'get_content' line.
+
+        // Case: Legal Section.
+        if (get_row_layout() == 'legal_tabs_section') : ?>
+            <?php include 'blocks/legal-tabs.php'; ?>
+        <?php endif;
+
     // End loop.
     endwhile;
 endif;

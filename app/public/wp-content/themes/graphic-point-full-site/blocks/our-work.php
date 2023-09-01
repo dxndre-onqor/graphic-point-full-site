@@ -2,9 +2,9 @@
 <section class="our-work">
 
 <?php
-$ourWorkHeader = get_sub_field("our_work_header");
-$leadingText = get_sub_field("our_work_leading_text");
-$ctaLink = get_sub_field("cta_link");
+	$ourWorkHeader = get_sub_field("our_work_header");
+	$leadingText = get_sub_field("our_work_leading_text");
+	$ctaLink = get_sub_field("cta_link");
 ?>
 
 <div class="container">
@@ -51,6 +51,19 @@ endforeach; ?>
 	echo "active";
 } ?>">
 				<img src="<?php echo esc_url($image["url"]); ?>" class="d-block w-100" alt="<?php echo esc_attr($image["alt"]); ?>">
+
+				<?php
+					$captionHeading = get_sub_field('tab_heading');
+					$captionText = get_sub_field('caption_text');
+
+					if( get_sub_field('enable_caption') ) {
+						echo '<div class="carousel-caption">';
+						echo '<h5 class="heading d-none d-md-block">' . $captionHeading . '</h5>';
+						echo '<p class="lead">' . $captionText . '</p>';
+						echo '</div>';
+					}
+				?>
+
 			</div>
 			<?php
 endforeach; ?>
