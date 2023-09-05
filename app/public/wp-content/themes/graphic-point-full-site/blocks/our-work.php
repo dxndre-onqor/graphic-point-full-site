@@ -86,7 +86,7 @@ endwhile; ?>
 </div>
 
 <div class="cta-section">
-	<a href="<?php $ctaLink['url'] ?>" class="cta"><?php echo $ctaLink['title'] ?></a>
+	<a href="<?php echo $ctaLink['url'] ?>" class="cta"><?php echo $ctaLink['title'] ?></a>
 </div>
 
 </section>

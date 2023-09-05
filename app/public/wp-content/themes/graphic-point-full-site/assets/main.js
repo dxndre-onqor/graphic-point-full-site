@@ -55,3 +55,23 @@ document.addEventListener('DOMContentLoaded', function() {
 	  });
 	});
   });
+
+
+  // Logo Slider
+
+  document.addEventListener("DOMContentLoaded", function () {
+	var carouselContainer = document.querySelector(".carousel-container");
+	var carousel = document.querySelector(".logo-slides");
+	var logos = logoSlides.querySelectorAll("li");
+  
+	carousel.addEventListener("mouseenter", function () {
+	  // Pause the animation on hover
+	  carousel.style.animationPlayState = "paused";
+	});
+  
+	carousel.addEventListener("mouseleave", function () {
+	  // Resume the animation when not hovering
+	  carousel.style.animationPlayState = "running";
+	});
+
+  });

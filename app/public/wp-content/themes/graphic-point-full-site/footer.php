@@ -36,14 +36,14 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-3">
+					<div class="col-md-3 d-none d-lg-flex">
 						<div class="logo-section">
 							<a href="/"><img src="<?php echo $siteLogo['url']; ?>" alt="<?php echo $siteLogo['alt']; ?>"></a>
 							<span class="footer-leading-text"><?php echo $leadingText ?><span>
 						</div>
 					</div>
 
-					<div class="col-md-4">
+					<div class="col-8 col-lg-4">
 						<?php
 							if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 								/*
@@ -81,7 +81,7 @@
 						?>
 					</div>
 
-					<div class="col-md-3">
+					<div class="col-4 col-md-3">
 						<ul class="footer-contact-section">
 							<li><?php echo $phoneNumber ?></li>
 							<li><?php echo $emailAddress ?></li>
@@ -101,10 +101,18 @@
 
 					
 				</div><!-- /.row -->
+				<div class="row d-flex d-lg-none logo-section-mobile">
+					<div class="col-4">
+						<a href="/"><img src="<?php echo $siteLogo['url']; ?>" alt="<?php echo $siteLogo['alt']; ?>"></a>
+					</div>
+					<div class="col-8 d-flex mobile-footer-leading-text-holder">
+						<span class="footer-leading-text"><?php echo $leadingText ?><span>
+					</div>
+				</div>
 			</div><!-- /.container -->
 
 			<div class="credit">
-				<span>Designed and built by ONQOR.</span>
+				<span>Designed and built by <a href="https://www.onqor.com" target="_blank">ONQOR</a>.</span>
 			</div>
 
 		</footer><!-- /#footer -->

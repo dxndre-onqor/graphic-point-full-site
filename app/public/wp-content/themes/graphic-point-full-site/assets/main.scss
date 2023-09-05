@@ -395,11 +395,46 @@ body {
 			&#header {
 				background: black !important;
 				padding: 10px 0;
+
+				.container {
+					@include media-breakpoint-down(md) {
+						max-width: none;
+						padding: 0 30px;
+					}
+				}
 	
 				.navbar-brand {
 					img {
 						height: 52px;
 					}
+				}
+
+				.navbar-toggler {
+					border: none;
+
+					.navbar-toggler-icon {
+						display: inline-block;
+						height: 1.5em;
+						vertical-align: middle;
+						width: 1.5em;
+						color: white;
+					}
+				}
+
+				.mobile-navbar-toggler {
+					background: transparent;
+					border: none;
+
+					i {
+						color: white;
+						font-size: 2em;
+					}
+				}
+
+				.cta {
+					color: black;
+					background-color: white;
+					padding: 8px 16px;
 				}
 			}
 		}
@@ -501,11 +536,12 @@ body {
 					.text-side {
 						@include media-breakpoint-up(lg) {
 							width: 40%;
+							justify-content: center;
 						}
 
 						display: flex;
 						align-items: center;
-						justify-content: center;
+						justify-content: left;
 						padding: 4em 2em;
 
 						.text-side-content {
@@ -516,21 +552,30 @@ body {
 					.image-side {
 						@include media-breakpoint-up(lg) {
 							width: 60%;
+							padding-left: 0;
 						}
 
 						img, video {
 							width: 100%;
 						}
+
+						padding-left: 32px;
 					}
 				}
 
 				&.logo-carousel {
-					overflow: scroll; // This is to be changed once sliding function has been implemented
-					padding: 10px 0;
+					overflow: hidden; // This is to be changed once sliding function has been implemented
+					padding: 50px 0;
+
+					@include media-breakpoint-up(lg) {
+						padding: 10px 0;
+					}
 
 					ul {
 						list-style: none;
 						display: flex;
+						overflow: hidden;
+  						animation: scroll 20s linear infinite; 
 
 						li {
 							margin: 0 65px;
@@ -539,6 +584,15 @@ body {
 							}
 						}
 					}
+
+					@keyframes scroll {
+						0% {
+						  transform: translateX(0%);
+						}
+						100% {
+						  transform: translateX(-100%);
+						}
+					  }
 				}
 
 				&.text-media {
@@ -1150,11 +1204,7 @@ body {
 									font-weight: 400;
 									text-decoration: none;
 									padding: 0 15px;
-									transition: background-color 0.3s, color 0.3s;
-					
-									&:hover {
-										// background-color: #333;
-									}
+									transition: 0.3s all ease-in-out;
 								}
 					
 								// Active tab styles
@@ -1235,6 +1285,10 @@ body {
 		.container {
 			padding: 50px 0;
 
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+			}
+
 			.row {
 				justify-content: center;
 			}
@@ -1258,6 +1312,22 @@ body {
 			}
 		}
 
+		.logo-section-mobile {
+			img {
+				width: 100%;
+			}
+
+			.mobile-footer-leading-text-holder {
+				align-items: center;
+
+				.footer-leading-text {
+					font-size: 13px;
+				}
+			}
+
+
+		}
+
 		nav.footer-menu-links {
 			display: grid; 
 			grid-template-columns: 2fr 0fr;
@@ -1267,17 +1337,34 @@ body {
 				margin: 0 auto;
 
 				li {
+					font-size: 13px;
 					width: 50%;
+
+					@include media-breakpoint-up(md) {
+						font-size: 16px;
+					}
 
 					a.nav-link {
 						color: $white;
-						padding: 10px 40px;
+						padding: 10px 25px;
+
+						@include media-breakpoint-up(xl) {
+							padding: 10px 30px;
+						}
+
+						@include media-breakpoint-up(xl) {
+							padding: 10px 40px;
+						}
 					}
 
 					&:nth-child(odd) {
 						float: left;
-						border-left: 2px solid $white;
+						
+						@include media-breakpoint-up(lg) {
+							border-left: 2px solid $white;
+						}
 					}
+
 					&:nth-child(even) {
 						float: right;
 						border-left: 2px solid $white;
@@ -1292,8 +1379,17 @@ body {
 		ul.footer-contact-section {
 			list-style: none;
 
+			@include media-breakpoint-down(lg) {
+				padding-left: 0;
+			}
+
 			li {
+				font-size: 13px;
 				margin-bottom: 20px;
+
+				@include media-breakpoint-up(md) {
+					font-size: 16px;
+				}
 
 				&:first-of-type {
 					margin-top: 10px;
@@ -1328,6 +1424,10 @@ body {
 			font-weight: 300;
 			margin-top: 15px;
 			font-size: 14px;
+
+			a {
+				color: black;
+			}
 		}
 	}
 }

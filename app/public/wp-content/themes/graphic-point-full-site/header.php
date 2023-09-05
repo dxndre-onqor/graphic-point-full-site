@@ -22,8 +22,13 @@
 
 <div id="wrapper">
 	<header class="main-header">
-		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar navbar-expand-lg <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
+
+				<button class="mobile-navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'graphic-point-full-site' ); ?>">
+					<i class="fa-sharp fa-solid fa-bars"></i>
+				</button>
+
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
@@ -37,10 +42,6 @@
 						endif;
 					?>
 				</a>
-
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'graphic-point-full-site' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
 
 				<div id="navbar" class="collapse navbar-collapse justify-content-end">
 					<?php
@@ -67,6 +68,8 @@
 						endif;
 					?>
 				</div><!-- /.navbar-collapse -->
+
+				<a title="Get in touch" href="http://localhost:10006/get-in-touch/" class="cta d-block d-lg-none">Get in touch</a>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>
