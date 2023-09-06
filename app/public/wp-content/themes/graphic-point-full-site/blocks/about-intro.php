@@ -11,11 +11,11 @@
 
         <div class="row">
 
-            <div class="col-4 image-side">
+            <div class="col-12 col-md-4 image-side">
                 <img src="<?php echo $aboutLogo['sizes']['full-HD']; ?>" alt="<?php echo $aboutLogo['alt']; ?>">
             </div>
 
-            <div class="col-8 text-side">
+            <div class="col-12 col-md-8 text-side">
                 <p><?php echo $aboutIntroText ?></p>
             </div>
 

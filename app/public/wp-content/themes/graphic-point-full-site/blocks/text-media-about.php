@@ -19,17 +19,20 @@
 
         <div class="text-media-content">
 
-            <div class="image-side <?php if( get_sub_field('corresponding_image_position_about') ) {
+            <div class="d-none d-md-flex image-side <?php if( get_sub_field('corresponding_image_position_about') ) {
         echo "order-2";
     } ?>">
-                <img src="<?php echo $correspondingImage['url'];?>" alt="<?php echo $correspondingImage['alt'];?>">
+                <img src="<?php echo $correspondingImage['url'];?>" alt="<?php echo $correspondingImage['alt'];?>" class="d-none d-md-block">
             </div>
 
             <div class="text-side <?php if( get_sub_field('corresponding_image_position_about') ) {
         echo "text-end";
     } ?>">
                 <div class="text-container">
-                    <h2><?php echo $contentHeading ?></h2>
+                    <div class="heading-holder">
+                        <img src="<?php echo $correspondingImage['url'];?>" alt="<?php echo $correspondingImage['alt'];?>" class="d-block d-md-none">
+                        <h2><?php echo $contentHeading ?></h2>
+                    </div>
                     <p><?php echo $contentText ?></p>
                 </div>
             </div>

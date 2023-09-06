@@ -69,7 +69,7 @@
 					?>
 				</div><!-- /.navbar-collapse -->
 
-				<a title="Get in touch" href="http://localhost:10006/get-in-touch/" class="cta d-block d-lg-none">Get in touch</a>
+				<a title="Get in touch" href="http://localhost:10006/get-in-touch/" class="cta d-none d-sm-block d-lg-none">Get in touch</a>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>

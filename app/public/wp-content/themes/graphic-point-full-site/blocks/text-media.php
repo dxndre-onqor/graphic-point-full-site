@@ -17,11 +17,11 @@
 
     <div class="text-media-content">
 
-        <div class="image-side <?php if( get_sub_field('corresponding_image_position') ) {
-    echo "order-2";
-} ?>" style="background-image: url('<?php echo $correspondingImage; ?>')">
-            <!-- <img src=""> -->
+        <div class="image-side <?php if( get_sub_field('corresponding_image_position') ) {echo "order-2";} ?>">
+            <div class="image-overlay"></div>
+            <img src="<?php echo $correspondingImage; ?>">
         </div>
+        
 
         <div class="text-side">
             <div class="text-container">

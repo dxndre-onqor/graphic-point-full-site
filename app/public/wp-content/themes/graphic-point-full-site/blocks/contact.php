@@ -23,11 +23,11 @@
             <p class="lead"><?php echo $openingHours ?></p>
         </div>
         <div class="row contact-stats">
-            <div class="col-6">
+            <div class="col-12 col-md-6 contact-stat">
                 <a href="tel:<?php echo $phoneNumber ?>"><img src="<?php echo $phoneIcon['url'];?>" alt="<?php echo $phoneIcon['alt'];?>"> <?php echo $phoneNumber ?></a>
             </div>
-            <div class="col-6">
-                <a href="mailto:<?php echo $emailAddress ?>"><img src="<?php echo $emailIcon['url'];?>" alt="<?php echo $emailIcon['alt'];?>"> <?php echo $emailAddress ?></p></a>
+            <div class="col-12 col-md-6 contact-stat">
+                <a href="mailto:<?php echo $emailAddress ?>"><img src="<?php echo $emailIcon['url'];?>" alt="<?php echo $emailIcon['alt'];?>"> <?php echo $emailAddress ?></a>
             </div>
         </div>
 

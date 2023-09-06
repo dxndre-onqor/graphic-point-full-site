@@ -5,7 +5,9 @@
 			$siteLogo = get_field('site_logo', 'option');
 			$leadingText = get_field('footer_leading_text', 'option');
 			$phoneNumber = get_field('phone_number', 'option');
+			$phoneIcon = get_field('phone_icon', 'option');
 			$emailAddress = get_field('email_address', 'option');
+			$emailIcon = get_field('email_icon', 'option');
 			$artworkCTA = get_field('submit_artwork_cta', 'option');
 			$artworkLink = get_field('submit_artwork_link', 'option');
 			$facebookIcon = get_field('facebook_icon', 'option');
@@ -43,7 +45,7 @@
 						</div>
 					</div>
 
-					<div class="col-8 col-lg-4">
+					<div class="col-12 col-md-8 col-lg-4">
 						<?php
 							if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 								/*
@@ -81,17 +83,20 @@
 						?>
 					</div>
 
-					<div class="col-4 col-md-3">
+					<div class="col-12 col-md-4 col-lg-3">
 						<ul class="footer-contact-section">
-							<li><?php echo $phoneNumber ?></li>
-							<li><?php echo $emailAddress ?></li>
-							<li><a href="<?php echo $artworkLink ?>"><?php echo $artworkCTA ?></a></li>
+							<li class="d-none d-md-block"><?php echo $phoneNumber ?></li>
+							<li class="d-none d-md-block"><?php echo $emailAddress ?></li>
+							<li class="d-none d-md-block"><a href="<?php echo $artworkLink ?>"><?php echo $artworkCTA ?></a></li>
 
 							<div class="socials">
 								<ul>
 									<li><a href="<?php echo $facebooklink; ?>" target="_blank"><img src="<?php echo $facebookIcon['url']; ?>"></a></li>
 									<li><a href="<?php echo $twitterlink; ?>" target="_blank"><img src="<?php echo $xIcon['url']; ?>"></a></li>
 									<li><a href="<?php echo $instagramlink; ?>" target="_blank"><img src="<?php echo $instagramIcon['url']; ?>"></a></li>
+
+									<li class="d-block d-md-none"><a href="tel:<?php echo $phoneNumber; ?>" target="_blank"><img src="<?php echo $phoneIcon['url']; ?>"></a></li>
+									<li class="d-block d-md-none"><a href="mailTo:<?php echo $emailAddress; ?>" target="_blank"><img src="<?php echo $emailIcon['url']; ?>"></a></li>
 								</ul>
 							</div>
 						</ul>

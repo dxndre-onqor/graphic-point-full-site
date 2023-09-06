@@ -41,28 +41,3 @@
     </div>
 
 </section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const tabs = document.querySelectorAll('.legal-tab-list li');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabs.forEach(function (tab, index) {
-            tab.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Remove 'active' class from all tabs and tab contents
-                tabs.forEach(function (t) {
-                    t.classList.remove('active');
-                });
-                tabContents.forEach(function (content) {
-                    content.classList.remove('active');
-                });
-
-                // Add 'active' class to the clicked tab and corresponding content
-                tab.classList.add('active');
-                tabContents[index].classList.add('active');
-            });
-        });
-    });
-</script>
