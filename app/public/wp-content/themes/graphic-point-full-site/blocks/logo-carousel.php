@@ -1,5 +1,5 @@
 <!-- Company Logos Section -->
-<section class="logo-carousel">
+<section class="logo-carousel" >
   <div class="carousel-container">
     <ul class="logo-slides">
       <!-- Your original logos -->

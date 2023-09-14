@@ -4,6 +4,10 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 	<?php wp_head(); ?>
 </head>
 
@@ -22,7 +26,7 @@
 
 <div id="wrapper">
 	<header class="main-header">
-		<nav id="header" class="navbar navbar-expand-lg <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 
 				<button class="mobile-navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'graphic-point-full-site' ); ?>">
@@ -43,7 +47,7 @@
 					?>
 				</a>
 
-				<div id="navbar" class="collapse navbar-collapse justify-content-end">
+				<div id="navbar">
 					<?php
 						// Loading WordPress Custom Menu (theme_location).
 						wp_nav_menu(
@@ -58,20 +62,21 @@
 
 						if ( '1' === $search_enabled ) :
 					?>
-							<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<!-- <form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<div class="input-group">
 									<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'graphic-point-full-site' ); ?>" title="<?php esc_attr_e( 'Search', 'graphic-point-full-site' ); ?>" />
 									<button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'graphic-point-full-site' ); ?></button>
 								</div>
-							</form>
+							</form> -->
 					<?php
 						endif;
 					?>
+					<a title="Get in touch" href="/get-in-touch/" class="get-in-touch">Get in touch</a>
 				</div><!-- /.navbar-collapse -->
-
-				<a title="Get in touch" href="http://localhost:10006/get-in-touch/" class="cta d-none d-sm-block d-lg-none">Get in touch</a>
+				<a title="Get in touch" href="/get-in-touch/" class="get-in-touch get-in-touch__desktop d-lg-none">Get in touch</a>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
+		<!-- <a title="Get in touch" href="https://graphicpoint.onqor.group/get-in-touch/" class="get-in-touch">Get in touch</a> -->
 	</header>
 
 	<main id="main" class=""<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>

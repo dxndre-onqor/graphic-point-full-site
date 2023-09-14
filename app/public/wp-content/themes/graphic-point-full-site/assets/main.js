@@ -1,5 +1,10 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
+// Importing jQuery
+import $ from 'jquery';
+
+// Importing slick-slider
+import 'slick-carousel';
 
 (function () {
 	'use strict';
@@ -26,6 +31,37 @@ import * as bootstrap from 'bootstrap';
 	
 })();
 
+$(document).ready(function () {
+
+	$(".logo-slides").slick({
+		centerMode:true,
+		slidesToShow: 5,
+		speed: 2500,
+		infinite: true,
+		autoplaySpeed: 10,
+		autoplay: true,
+		cssEase: 'linear',
+		variableWidth: true,
+		dots: false,
+		prevArrow: false,
+		nextArrow: false
+	});
+
+	var firstItem = $('.drop-down-item-1').html();
+	$('.drop-down-select__active p').html(firstItem);
+
+	$('.drop-down-select').on('click', function(){
+		$('.drop-down-select').toggleClass('active');	
+	})
+	$('.drop-down-select .nav-link').on('click', function(event){	
+		var selectedItem = $(this).html();
+		$('.drop-down-select__active p').html(selectedItem);
+	});
+	$('.mobile-navbar-toggler').on('click', function(){
+		$('#navbar').toggleClass('active');
+	});
+	
+});
 
 document.addEventListener('DOMContentLoaded', function() {
 	// Get all tab links
@@ -60,19 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Logo Slider
 
   document.addEventListener("DOMContentLoaded", function () {
-	var carouselContainer = document.querySelector(".carousel-container");
-	var carousel = document.querySelector(".logo-slides");
-	var logos = logoSlides.querySelectorAll("li");
+	//   alert('scream');
+	// var carouselContainer = document.querySelector(".carousel-container");
+	// var carousel = document.querySelector(".logo-slides");
+	// var logos = logoSlides.querySelectorAll("li");
   
-	carousel.addEventListener("mouseenter", function () {
-	  // Pause the animation on hover
-	  carousel.style.animationPlayState = "paused";
-	});
+	// carousel.addEventListener("mouseenter", function () {
+	//   // Pause the animation on hover
+	//   carousel.style.animationPlayState = "paused";
+	// });
   
-	carousel.addEventListener("mouseleave", function () {
-	  // Resume the animation when not hovering
-	  carousel.style.animationPlayState = "running";
-	});
+	// carousel.addEventListener("mouseleave", function () {
+	//   // Resume the animation when not hovering
+	//   carousel.style.animationPlayState = "running";
+	// });
 
   });
 

@@ -2,7 +2,7 @@
 	<section class="services">
 		<div class="text-area container">
 
-            <h2><?php the_sub_field('services_heading'); ?></h2>
+            <?php the_sub_field('services_heading'); ?>
             <p><?php the_sub_field('services_text') ?></p>			
             
 		</div>
