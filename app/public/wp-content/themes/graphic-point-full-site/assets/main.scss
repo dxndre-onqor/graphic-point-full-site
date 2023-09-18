@@ -428,7 +428,6 @@ body {
 				#navbar {
 					#menu-header-navigation{
 						margin: 0 auto;
-						border-top: 3px solid white;
 
 						@include media-breakpoint-up(lg) {
 							border-top: none;
@@ -500,7 +499,6 @@ body {
 			width: 202px;
 			z-index: 3;	
 			overflow: hidden;
-			padding-bottom: 42px;
 			transition: top 0.5s;
 
 			@include media-breakpoint-up(md) {
@@ -518,6 +516,14 @@ body {
 
 			.navbar-brand {
 				margin: 0 auto;
+			}
+
+			.active.collapse.show {
+				padding-bottom: 42px;
+
+				ul {
+					border-top: 3px solid white;
+				}
 			}
 
 			ul {
@@ -637,6 +643,7 @@ body {
 				&.active{
 					ul{
 						height: auto;
+						border-top: 3px solid white;
 					}
 
 					.get-in-touch {
@@ -991,9 +998,15 @@ body {
 							margin: 0 auto;
 							padding: 32px 0;
 							justify-content: center;
+							display: flex;
+
+							@include media-breakpoint-down(sm) {
+								text-align: center;
+							}
 
 							@include media-breakpoint-up(md) {
 								padding: 48px 0;
+								max-width: 1050px;
 							}
 
 							&:last-of-type {
@@ -1018,6 +1031,7 @@ body {
 								justify-content: center;
 								align-items: center;
 								max-width: 175px;
+								height: auto;
 
 								img {
 									width: 100%;
@@ -1033,6 +1047,20 @@ body {
 									padding: 0;
 									max-width: none;
 									margin: 0;
+
+									h2 {
+										margin: 0;
+
+										@include media-breakpoint-down(sm) {
+											text-align: center;
+										}
+									}
+
+									p {
+										@include media-breakpoint-down(sm) {
+											text-align: center;
+										}
+									}
 								}
 							}
 						}
@@ -1140,6 +1168,10 @@ body {
 					@include media-breakpoint-up(lg) {
 						padding: 96px 0;
 						padding-bottom: 93px;
+					}
+
+					.container {
+						max-width: 1050px;
 					}
 
 					.image-side,
