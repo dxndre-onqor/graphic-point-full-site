@@ -73,7 +73,7 @@
 					?>
 					<a title="Get in touch" href="/get-in-touch/" class="get-in-touch">Get in touch</a>
 				</div><!-- /.navbar-collapse -->
-				<a title="Get in touch" href="/get-in-touch/" class="get-in-touch get-in-touch__desktop d-lg-none">Get in touch</a>
+				<a title="Get in touch" href="/get-in-touch/" class="get-in-touch get-in-touch__desktop d-none d-sm-block d-lg-none">Get in touch</a>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 		<!-- <a title="Get in touch" href="https://graphicpoint.onqor.group/get-in-touch/" class="get-in-touch">Get in touch</a> -->

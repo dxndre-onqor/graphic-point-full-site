@@ -16,20 +16,20 @@
      ?>
 
     <div class="text-media-content">
+        <div class="row">
+            <div class="image-side <?php if( get_sub_field('corresponding_image_position') ) {echo "order-2";} ?>">
+                <div class="image-overlay"></div>
+                <img src="<?php echo $correspondingImage; ?>">
+            </div>
+            
 
-        <div class="image-side <?php if( get_sub_field('corresponding_image_position') ) {echo "order-2";} ?>">
-            <div class="image-overlay"></div>
-            <img src="<?php echo $correspondingImage; ?>">
-        </div>
-        
-
-        <div class="text-side">
-            <div class="text-container">
-                <h2><?php echo $contentHeading ?></h2>
-                <p><?php echo $contentText ?></p>
+            <div class="text-side">
+                <div class="text-container">
+                    <h2><?php echo $contentHeading ?></h2>
+                    <p><?php echo $contentText ?></p>
+                </div>
             </div>
         </div>
-
     </div>
 
     <?php endwhile; ?>
