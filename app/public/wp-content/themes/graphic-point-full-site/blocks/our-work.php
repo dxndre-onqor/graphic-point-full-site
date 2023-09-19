@@ -55,6 +55,14 @@ the_row(); ?>
 			<div id="<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<!-- Carousel Indicators -->
 		<ol class="carousel-indicators">
+			
+			<a class="carousel-control-prev" href="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" role="button" data-slide="prev">
+				<!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+`					<path fill-rule="evenodd" clip-rule="evenodd" d="M2.82878 8.00065L8.48651 2.34293L7.0723 0.928711L1.41457 6.58644L1.41422 6.58609L9.22763e-06 8.0003L7.07108 15.0714L8.48529 13.6572L2.82878 8.00065Z" fill="white"/>
+				</svg>
+			</a>
+
 			<?php $gallery_images = get_sub_field("tab_gallery");
 // Get the gallery images for this tab
 
@@ -65,6 +73,14 @@ the_row(); ?>
 } ?>></li>
 			<?php
 endforeach; ?>
+
+			<a class="carousel-control-next" href="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" role="button" data-slide="next">
+				<!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M6.14424 7.99935L0.486511 13.6571L1.90072 15.0713L7.55845 9.41356L7.5588 9.41391L8.97301 7.9997L1.90195 0.928629L0.487732 2.34284L6.14424 7.99935Z" fill="white"/>
+				</svg>
+			</a>
+
 		</ol>
 
 		<!-- Carousel Slides -->
@@ -91,14 +107,6 @@ endforeach; ?>
 			<?php
 endforeach; ?>
 		</div>
-		
-		<!-- Carousel Controls -->
-		<a class="carousel-control-prev" href="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		</a>
-		<a class="carousel-control-next" href="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		</a>
 	</div>
 
 </div>

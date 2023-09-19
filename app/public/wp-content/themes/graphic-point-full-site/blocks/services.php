@@ -13,7 +13,7 @@
                 <?php while( have_rows('individual_service') ): the_row(); 
                     $serviceImage = get_sub_field('individual_service_image');
                     ?>
-                    <li>
+                    <li class="service">
                         <a href="<?php the_sub_field('individual_service_link'); ?>">
                             <img src="<?php echo $serviceImage ?>">
                             <?php echo wp_get_attachment_image( $serviceImage, 'full' ); ?>
