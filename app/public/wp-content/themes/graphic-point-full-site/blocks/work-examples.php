@@ -16,9 +16,9 @@ if (have_rows('block_sections')) :
 			<section class="our-work-examples">
 
 				<div class="container">
-					<div class="row">
-						<h2><?php echo $workExamplesHeader; ?></h2>
-					</div>
+
+					<h2><?php echo $workExamplesHeader; ?></h2>
+					
 					<div class="work-slides">
 
 						<?php if ($gallery_images) : ?>

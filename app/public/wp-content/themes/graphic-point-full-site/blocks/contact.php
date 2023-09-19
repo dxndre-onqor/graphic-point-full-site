@@ -17,10 +17,13 @@
     <div class="container">
 
         <div class="row">
-            <h2><?php echo $contactHeader ?></h2>
-            <p class="lead"><?php echo $leadingText ?></p>
-            <hr>
-            <p class="lead"><?php echo $openingHours ?></p>
+            <div class="stats-holder">
+                <h2><?php echo $contactHeader ?></h2>
+                <p class="lead"><?php echo $leadingText ?></p>
+                <hr>
+                <p class="lead"><?php echo $openingHours ?></p>
+            </div>
+            
         </div>
         <div class="row contact-stats">
             <div class="col-12 col-md-6 contact-stat">

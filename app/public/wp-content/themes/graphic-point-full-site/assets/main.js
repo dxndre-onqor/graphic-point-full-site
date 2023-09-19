@@ -36,9 +36,9 @@ $(document).ready(function () {
 	$(".logo-slides").slick({
 		centerMode:true,
 		slidesToShow: 5,
-		speed: 2500,
+		speed: 5000,
 		infinite: true,
-		autoplaySpeed: 10,
+		autoplaySpeed: 0,
 		autoplay: true,
 		cssEase: 'linear',
 		variableWidth: true,

@@ -12,7 +12,7 @@
 
         <div class="row">
             <h2><?php echo $submitArtworkHeading; ?></h2>
-            <p class="lead"><?php echo $introText; ?></p>
+            <?php echo $introText; ?>
         </div>
 
         <div class="row">
