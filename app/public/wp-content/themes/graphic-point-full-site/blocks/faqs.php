@@ -5,7 +5,7 @@
 
 	<div class="text-area">
 
-		<h2><?php the_sub_field('faqs_title'); ?></h2>	
+		<?php the_sub_field('faqs_title'); ?>
 
 	</div>
 

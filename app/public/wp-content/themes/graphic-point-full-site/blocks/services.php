@@ -7,21 +7,31 @@
             
 		</div>
 		<div class="individual-services">
-            
-            <?php if( have_rows('individual_service') ): ?>
-                <ul class="individual-service">
-                <?php while( have_rows('individual_service') ): the_row(); 
-                    $serviceImage = get_sub_field('individual_service_image');
+            <div id="individual-services-carousel" class="carousel slide" data-ride="carousel">
+                <div class="service-carousel">
+                    <?php
+                    if (have_rows('individual_service')):
+                        $item_count = 0;
+
+                        while (have_rows('individual_service')): the_row();
+                            $serviceImage = get_sub_field('individual_service_image');
+
+                            // Output the carousel item
+                            echo '<div class="' . ($item_count === 0 ? ' active' : '') . '">';
+                            echo '<div class="item-content-container text-center">';
+                            echo '<a href="' . get_sub_field('individual_service_link') . '">';
+                            echo '<img src="' . $serviceImage . '" alt="' . get_sub_field('individual_service_title') . '">';
+                            echo '<div class="caption">';
+                            echo '<h3>' . get_sub_field('individual_service_title') . '</h3>';
+                            echo '</div>';
+                            echo '</a>';
+                            echo '</div>';
+                            echo '</div>';
+
+                            $item_count++;
+                        endwhile;
+                    endif;
                     ?>
-                    <li class="service">
-                        <a href="<?php the_sub_field('individual_service_link'); ?>">
-                            <img src="<?php echo $serviceImage ?>">
-                            <?php echo wp_get_attachment_image( $serviceImage, 'full' ); ?>
-                            <span><?php the_sub_field('individual_service_title'); ?></span>
-                        </a>
-                    </li>
-                <?php endwhile; ?>
-                </ul>
-            <?php endif; ?>
-		</div>
-	</section>
+                </div>
+            </div>
+        </div>

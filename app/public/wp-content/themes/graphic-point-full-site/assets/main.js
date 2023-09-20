@@ -36,7 +36,7 @@ $(document).ready(function () {
 	$(".logo-slides").slick({
 		centerMode:true,
 		slidesToShow: 5,
-		speed: 5000,
+		speed: 7500,
 		infinite: true,
 		autoplaySpeed: 0,
 		autoplay: true,
@@ -45,6 +45,21 @@ $(document).ready(function () {
 		dots: false,
 		prevArrow: false,
 		nextArrow: false
+	});
+
+	$(".service-carousel").slick({
+		centerMode:true,
+		slidesToShow: 5, 
+		speed: 7500,
+		infinite: true,
+		autoplaySpeed: 0,
+		autoplay: true,
+		cssEase: 'linear',
+		variableWidth: true,
+		dots: true,
+		prevArrow: false,
+		nextArrow: false,
+		pauseOnHover: true
 	});
 
 	var firstItem = $('.drop-down-item-1').html();

@@ -594,3 +594,12 @@ function enqueue_styles_and_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+
+
+// Enqueue the slick/slick.css file
+
+function enqueue_custom_styles() {
+    
+    wp_enqueue_style('slick-css', get_template_directory_uri() . '/css/slick/slick.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');

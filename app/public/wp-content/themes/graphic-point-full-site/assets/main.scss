@@ -1125,6 +1125,111 @@ body {
 					.individual-services {
 						overflow-x: scroll;
 
+						#individual-services-carousel {
+							margin-top: 48px;
+
+							@include media-breakpoint-up(sm) {
+								margin-top: 56px;
+							}
+
+							@include media-breakpoint-up(md) {
+								margin-top: 48px;
+							}
+
+							@include media-breakpoint-up(lg) {
+								margin-top: 42px;
+							}
+
+							.slick-slide {
+								margin: 0 16px;
+
+								.item-content-container {
+									display: block;
+
+									a {
+										display: block;
+
+										width: 150px;
+										height: 110px;
+
+										@include media-breakpoint-up(md) {
+											width: 219px;
+											height: 160px;
+										}
+
+										img {
+											object-fit: cover;
+											width: 100%;
+											
+										}
+									}
+									
+									.caption {
+										color: white;
+										position: static;
+										padding-top: 10px;
+										width: 100%;
+
+										@include media-breakpoint-up(md) {
+											padding-top: 32px;
+										}
+
+										h3 {
+											font-style: normal;
+											font-weight: 600;
+											line-height: normal;
+											font-size: 16px;
+
+											@include media-breakpoint-up(md) {
+												font-size: 22px;
+											}
+										}
+									}
+								}
+							}
+							
+							ul.slick-dots {
+								margin-top: 48px;
+								margin-bottom: 0;
+								list-style: none;
+								position: static;
+								padding: 0;
+								display: flex;
+								justify-content: center;
+
+								li {
+									display: inline-flex;
+
+									&.active {
+										background: white;
+									}
+
+									button {
+										margin: 0 8px;
+										border: 3px solid white;
+										padding: 4px;
+										border-radius: 25px;
+										background: transparent;
+										font-size: 0;
+
+										&:hover {
+											background-color: white;
+										}
+
+										&:focus-visible {
+											background-color: white;
+										}
+									}
+
+									&.slick-active {
+										button {
+											background: white;
+										}
+									}
+								}
+							}
+						}
+
 						ul.individual-service {
 							list-style: none;
 							display: flex;
@@ -1250,6 +1355,17 @@ body {
 						h2 {
 							text-align: center;
 							margin-bottom: 25px;
+							font-size: 22px;
+							font-weight: 600;
+
+							@include media-breakpoint-up(md) {
+								font-size: 32px;
+							}
+
+							@include media-breakpoint-up(lg) {
+								font-size: 40px;
+								font-weight: 700;
+							}
 						}
 					}
 					.accordion-item {
@@ -1489,6 +1605,93 @@ body {
 						@include media-breakpoint-up(lg) {
 							margin-top: 52px;
 						}
+
+						.drop-down-select {
+							padding: 10px;
+							background-color: #fff;
+							width: min-content;
+							position: relative;
+							cursor: pointer;
+							margin: 0 auto;
+							min-width: 275px;
+							display: inherit;
+							margin-bottom: 32px;
+
+							@include media-breakpoint-up(lg) {
+								display: none;
+							}
+						
+							&__active {
+								display: flex;
+								flex-direction: row;
+						
+								svg {
+									position: absolute;
+									right: 10px;
+									top: 17px;
+								}
+							}
+							
+							p {
+								color:#010203;
+								width: max-content;
+								margin-bottom: 0px;
+								font-family: Poppins;
+								font-size: 16px;
+								font-style: normal;
+								font-weight: 500;
+								line-height: normal;
+								margin-right: 25px;
+							}
+						
+							ul {
+								margin-bottom: 0 !important;
+								overflow: hidden;
+								position: absolute;
+								z-index: 3;
+								background-color: #fff;
+								padding: 0px;
+								margin: 0px;
+								width: 100%;
+								left: 0px;
+								height: 0px;
+								display: flex;
+								flex-direction: column;
+						
+								li.nav-item {
+									padding: 4px 5px;
+
+									a.nav-link {
+										font-size: 16px;
+										padding: 0;
+									}
+								}
+							}
+						
+							a {
+								color: #000 !important;
+								font-family: Poppins;
+								font-size: 16px;
+								font-style: normal;
+								font-weight: 300 !important;
+								line-height: normal;
+
+								&:hover {
+									background-color: $yellow;
+								}
+							}
+						
+							&.active{
+								ul{
+									height: auto;
+								}
+
+								svg{	
+									transform: rotate(180deg);
+								}
+							}
+						}
+						
 
 						ul {
 							&.nav {
@@ -2244,7 +2447,7 @@ body {
 		}
 
 		.container {
-			max-width: 1009px;
+			max-width: 1050px;
 			
 			@include media-breakpoint-up(md) {
 				padding: 50px 0;
@@ -2255,8 +2458,28 @@ body {
 				padding-bottom: 60px;
 			}
 
+			@include media-breakpoint-up(lg) {
+				padding: 0 30px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				padding-left: 36px;
+				padding-right: 49px;
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding: 0;
+			}
+
 			.row {
 				justify-content: center;
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+
+				@include media-breakpoint-up(lg) {
+					max-width: none;
+				}
 			}
 		}
 
@@ -2352,6 +2575,7 @@ body {
 
 		ul.footer-contact-section {
 			list-style: none;
+			padding-left: 16px;
 
 			@include media-breakpoint-down(lg) {
 				padding-left: 0;
@@ -2366,7 +2590,7 @@ body {
 				}
 
 				&:first-of-type {
-					margin-top: 10px;
+					margin-top: 8px;
 				}
 
 				a {
@@ -2450,64 +2674,6 @@ body {
 	}
 }
 
-.drop-down-select{
-	padding: 10px;
-	background-color: #fff;
-	width: min-content;
-	position: relative;
-	cursor: pointer;
-	margin: 0 auto;
-	min-width: 275px;
-	display: none;
-	margin-bottom: 32px;
-
-	&__active{
-		display: flex;
-		flex-direction: row;
-
-		svg{
-			position: absolute;
-			right: 10px;
-			top: 17px;		
-		}
-	}
-
-	p {
-		color:#010203;
-		width: max-content;
-		margin-bottom: 0px;
-		font-family: Poppins;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 500;
-		line-height: normal;
-		margin-right: 25px;
-	}
-
-	ul {
-		margin-bottom: 0 !important;
-		overflow: hidden;
-		position: absolute;
-		z-index: 3;
-		background-color: #fff;
-		padding: 0px;
-		margin: 0px;
-		width: 100%;
-		left: 0px;
-		height: 0px;
-		display: flex;
-		flex-direction: column;
-	}
-	a {
-		color: #000 !important;
-		font-family: Poppins;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 300 !important;
-		line-height: normal;
-	}
-	
-}
 
 a.get-in-touch{
 	background-color: #fff;
