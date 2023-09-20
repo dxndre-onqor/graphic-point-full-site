@@ -1558,17 +1558,23 @@ body {
 
 							.carousel-item {
 								max-height: 800px;
-								justify-content: center;
+								justify-content: flex-start;
 								align-items: center;
-								height: 270px;
+								// height: 270px;
+								display: flex;
+								flex-direction: column;
 
 								@include media-breakpoint-up(md) {
-									height: 347px;
+									// height: 347px;
+									// height: 800px;
+									height: auto;
 								}
 
 								@include media-breakpoint-up(lg) {
 									height: 630px;
-									display: flex;
+									// display: flex;
+									flex-direction: row;
+									justify-content: center;
 								}
 
 								@include media-breakpoint-up(xxl) {
@@ -1577,20 +1583,73 @@ body {
 
 								img {
 									max-width: 100%;
-									height: auto;
+									// height: auto;
+									height: 100%;
+									object-fit: cover; /* Maintain aspect ratio and cover the container */
+									object-position: center;
+
+									@include media-breakpoint-up(lg) {
+										height: 100%;
+									}
+
+									@include media-breakpoint-up(xxl) {
+										// height: auto;
+									}
+								}
+
+								.carousel-image-container {
+									width: 100%;
+									height: 270px;
+									overflow: hidden;
+
+									@include media-breakpoint-up(md) {
+										height: 347px;
+									}
+	
+									@include media-breakpoint-up(lg) {
+										height: 630px;
+									}
+	
+									@include media-breakpoint-up(xxl) {
+										height: 905px;
+									}
 								}
 
 								.carousel-caption {
 									background: $black;
 									width: 100%;
 									max-width: 700px;
-									padding: 25px 50px;
+									// padding: 25px 50px;
+									padding: 32px 16px;
+									padding-bottom: 0;
 									bottom: 50px;
 									margin: 0 auto;
-									position: static;
+									position: initial;
+
+									@include media-breakpoint-up(sm) {
+										padding: 32px 20px;
+										padding-bottom: 0;
+									}
+
+									@include media-breakpoint-up(md) {
+										padding: 32px 49px;
+										padding-bottom: 0;
+									}
+
+									@include media-breakpoint-down(lg) {
+										// position: absolute;
+										left: 0;
+										right: 0;
+										width: 100%;
+									}
 
 									@include media-breakpoint-up(lg) {
 										position: absolute;
+										padding: 32px;
+									}
+
+									@include media-breakpoint-up(xl) {
+										padding: 32px 50px;
 									}
 
 									h5 {
@@ -1616,8 +1675,19 @@ body {
 						}
 
 						.carousel-indicators {
-							margin-bottom: 18px;
-							
+							margin-bottom: 0;
+							top: 230px;
+							height: 15px;
+
+							@include media-breakpoint-up(md) {
+								top: 315px;
+							}
+
+							@include media-breakpoint-up(lg) {
+								margin-bottom: 18px;
+								top: auto;
+							}
+
 							li {
 								display: block;
 								padding: 5px;
@@ -1631,6 +1701,10 @@ body {
 									background: white;
 									transition: 0.3s all ease;
 								}
+
+								&:hover {
+									background-color: white;
+								}
 							}
 						}
 
@@ -1639,11 +1713,17 @@ body {
 							position: relative;
 							background: transparent;
 							width: 15px;
+							height: 15px;
 							opacity: 1;
 							margin: 0 16px;
+
+							@include media-breakpoint-up(lg) {
+								height: auto;
+							}
 						}
 
 						.carousel-fade .carousel-item {
+							position: relative;
 							opacity: 0;
 							transition: opacity 0.6s ease-in-out;
 						}
@@ -2164,6 +2244,8 @@ body {
 		}
 
 		.container {
+			max-width: 1009px;
+			
 			@include media-breakpoint-up(md) {
 				padding: 50px 0;
 			}

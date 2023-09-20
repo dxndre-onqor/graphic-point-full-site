@@ -50,7 +50,7 @@ endwhile; ?>
 
 	<div class="tab-content" id="myTabContent">
 		<?php while (have_rows("work_tabs")):
-the_row(); ?>
+		the_row(); ?>
 		<div class="tab-pane fade <?php if (get_row_index() === 1) echo 'show active'; ?>" id="<?php echo sanitize_title(get_sub_field("tab_heading")); ?>" role="tabpanel" aria-labelledby="<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-tab">
 			<div id="<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<!-- Carousel Indicators -->
@@ -64,15 +64,14 @@ the_row(); ?>
 			</a>
 
 			<?php $gallery_images = get_sub_field("tab_gallery");
-// Get the gallery images for this tab
+			// Get the gallery images for this tab ?>
 
-?>
 			<?php foreach ($gallery_images as $index => $image): ?>
 			<li data-target="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" data-slide-to="<?php echo $index; ?>" <?php if ($index === 0) {
-	echo 'class="active"';
-} ?>></li>
-			<?php
-endforeach; ?>
+				echo 'class="active"';
+			} ?>></li>
+						<?php
+			endforeach; ?>
 
 			<a class="carousel-control-next" href="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" role="button" data-slide="next">
 				<!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
@@ -86,11 +85,11 @@ endforeach; ?>
 		<!-- Carousel Slides -->
 		<div class="carousel-inner">
 			<?php foreach ($gallery_images as $index => $image): ?>
-			<div class="carousel-item <?php if ($index === 0) {
-	echo "active";
-} ?>">
-				<img src="<?php echo esc_url($image["url"]); ?>" class="d-block w-100" alt="<?php echo esc_attr($image["alt"]); ?>">
 
+			<div class="carousel-item <?php if ($index === 0) {echo "active";} ?>">
+				<div class="carousel-image-container">
+					<img src="<?php echo esc_url($image["url"]); ?>" class="d-block w-100" alt="<?php echo esc_attr($image["alt"]); ?>">
+				</div>
 				<?php
 					$captionHeading = get_sub_field('tab_heading');
 					$captionText = get_sub_field('caption_text');
@@ -104,8 +103,11 @@ endforeach; ?>
 				?>
 
 			</div>
+
 			<?php
-endforeach; ?>
+			endforeach; ?>
+
+			
 		</div>
 	</div>
 

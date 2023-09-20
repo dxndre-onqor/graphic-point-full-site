@@ -38,14 +38,14 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-3 d-none d-lg-flex">
+					<div class="col-md-3 col-lg-4 d-none d-lg-flex">
 						<div class="logo-section">
 							<a href="/"><img src="<?php echo $siteLogo['url']; ?>" alt="<?php echo $siteLogo['alt']; ?>"></a>
 							<span class="footer-leading-text"><?php echo $leadingText ?><span>
 						</div>
 					</div>
 
-					<div class="col-12 col-md-8 col-lg-4">
+					<div class="col-12 col-md-8 col-lg-5">
 						<?php
 							if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 								/*
