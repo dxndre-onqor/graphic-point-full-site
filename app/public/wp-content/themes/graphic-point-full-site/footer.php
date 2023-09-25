@@ -45,7 +45,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-md-8 col-lg-5">
+					<div class="col-12 col-md-8 col-lg-5 footer-menu-links-holder">
 						<?php
 							if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 								/*
