@@ -48,18 +48,37 @@ $(document).ready(function () {
 	});
 
 	$(".service-carousel").slick({
-		centerMode:true,
-		slidesToShow: 5, 
+		centerMode: false,
+		slidesToShow: 1, 
 		speed: 2000,
 		infinite: true,
 		autoplaySpeed: 500,
-		autoplay: true,
+		autoplay: false,
 		cssEase: 'linear',
 		variableWidth: false,
 		dots: true,
 		prevArrow: false,
 		nextArrow: false,
-		pauseOnHover: true
+		pauseOnHover: true,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+				  infinite: true,
+				  centerMode: true,
+				  slidesToShow: 5
+				}
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				infinite: true,
+				centerMode: true,
+				slidesToShow: 3
+			  }
+			}
+		  ]
 	});
 
 	var firstItem = $('.drop-down-item-1').html();
