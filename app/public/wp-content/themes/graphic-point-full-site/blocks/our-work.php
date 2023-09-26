@@ -67,7 +67,7 @@ endwhile; ?>
 			// Get the gallery images for this tab ?>
 
 			<?php foreach ($gallery_images as $index => $image): ?>
-			<li data-target="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" data-slide-to="<?php echo $index; ?>" <?php if ($index === 0) {
+			<li data-target="#<?php echo sanitize_title(get_sub_field("tab_heading")); ?>-carousel" data-slide-to="<?php echo $index + 1; ?>" <?php if ($index === 0) {
 				echo 'class="active"';
 			} ?>></li>
 						<?php
@@ -82,7 +82,7 @@ endwhile; ?>
 
 		</ol>
 
-		<!-- Carousel Slides -->
+	
 		<div class="carousel-inner">
 			<?php foreach ($gallery_images as $index => $image): ?>
 
