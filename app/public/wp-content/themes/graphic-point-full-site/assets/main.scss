@@ -1836,12 +1836,12 @@ body {
 								max-height: 800px;
 								justify-content: flex-start;
 								align-items: center;
-								height: 270px;
+								// height: 270px;
 								display: flex;
 								flex-direction: column;
 
 								@include media-breakpoint-up(md) {
-									height: 347px;
+									// height: 347px;
 									// height: 800px;
 									height: auto;
 								}

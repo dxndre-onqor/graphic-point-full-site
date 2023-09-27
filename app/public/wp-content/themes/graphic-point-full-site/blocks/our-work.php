@@ -87,7 +87,7 @@ endwhile; ?>
 			<?php foreach ($gallery_images as $index => $image): ?>
 
 			<div class="carousel-item <?php if ($index === 0) {echo "active";} ?>">
-				<div class="">
+				<div class="carousel-image-container">
 					<img src="<?php echo esc_url($image["url"]); ?>" class="d-block w-100" alt="<?php echo esc_attr($image["alt"]); ?>">
 				</div>
 				<?php
