@@ -85,9 +85,9 @@
 
 					<div class="col-12 col-md-4 col-lg-3">
 						<ul class="footer-contact-section">
-							<li class="d-none d-md-block"><?php echo $phoneNumber ?></li>
-							<li class="d-none d-md-block"><?php echo $emailAddress ?></li>
-							<li class="d-none d-md-block"><a href="<?php echo $artworkLink ?>"><?php echo $artworkCTA ?></a></li>
+							<li class="d-none d-md-block contact-links"><a href="tel:<?php echo $phoneNumber; ?>" target="_blank"><?php echo $phoneNumber ?></a></li>
+							<li class="d-none d-md-block contact-links"><a href="mailTo:<?php echo $emailAddress; ?>" target="_blank"><?php echo $emailAddress ?></a></li>
+							<li class="d-none"><a href="<?php echo $artworkLink ?>"><?php echo $artworkCTA ?></a></li>
 
 							<div class="socials">
 								<ul>

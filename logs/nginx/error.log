@@ -44,3 +44,4 @@
 2023/09/18 11:30:53 [emerg] 2693#0: bind() to 0.0.0.0:10006 failed (48: Address already in use)
 2023/09/18 11:30:53 [emerg] 2693#0: bind() to 0.0.0.0:10006 failed (48: Address already in use)
 2023/09/18 11:30:53 [emerg] 2693#0: still could not bind()
+2023/09/27 17:49:27 [alert] 2782#0: *24976 pread() read only 0 of 32768 from "/Users/dandrephillips/Local Sites/graphic-point-full-site/app/public/wp-content/themes/graphic-point-full-site/assets/dist/main.css" while sending response to client, client: 127.0.0.1, server: , request: "GET /wp-content/themes/graphic-point-full-site/assets/dist/main.css?ver=3.4.1&browsersync=1695833367799 HTTP/1.1", host: "localhost:10007", referrer: "http://localhost:3000/"

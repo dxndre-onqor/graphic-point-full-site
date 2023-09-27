@@ -19,12 +19,12 @@
                             // Output the carousel item
                             echo '<div class="' . ($item_count === 0 ? ' active' : '') . '">';
                             echo '<div class="item-content-container text-center">';
-                            echo '<a href="' . get_sub_field('individual_service_link') . '">';
+                            // echo '<a href="' . get_sub_field('individual_service_link') . '">';
                             echo '<img src="' . $serviceImage . '" alt="' . get_sub_field('individual_service_title') . '">';
                             echo '<div class="caption">';
                             echo '<h3>' . get_sub_field('individual_service_title') . '</h3>';
                             echo '</div>';
-                            echo '</a>';
+                            // echo '</a>';
                             echo '</div>';
                             echo '</div>';
 

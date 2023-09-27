@@ -41,14 +41,14 @@ if (have_rows('block_sections')) :
 								</ol>
 								
 								<!-- Controls -->
-								<a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
+								<!-- <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 									<span class="sr-only"></span>
 								</a>
 								<a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
 									<span class="carousel-control-next-icon" aria-hidden="true"></span>
 									<span class="sr-only"></span>
-								</a>
+								</a> -->
 							</div>
 						<?php endif; ?>
 					</div>

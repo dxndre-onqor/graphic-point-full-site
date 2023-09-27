@@ -27,10 +27,10 @@
         </div>
         <div class="row contact-stats">
             <div class="col-12 col-md-6 contact-stat">
-                <a href="tel:<?php echo $phoneNumber ?>"><img src="<?php echo $phoneIcon['url'];?>" alt="<?php echo $phoneIcon['alt'];?>"> <?php echo $phoneNumber ?></a>
+                <a href="tel:<?php echo $phoneNumber ?>"><img src="<?php echo $phoneIcon['url'];?>" alt="<?php echo $phoneIcon['alt'];?>"><span><?php echo $phoneNumber ?></span></a>
             </div>
             <div class="col-12 col-md-6 contact-stat">
-                <a href="mailto:<?php echo $emailAddress ?>"><img src="<?php echo $emailIcon['url'];?>" alt="<?php echo $emailIcon['alt'];?>"> <?php echo $emailAddress ?></a>
+                <a href="mailto:<?php echo $emailAddress ?>"><img src="<?php echo $emailIcon['url'];?>" alt="<?php echo $emailIcon['alt'];?>"><span><?php echo $emailAddress ?></span></a>
             </div>
         </div>
 
