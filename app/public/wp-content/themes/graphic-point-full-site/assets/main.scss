@@ -1543,6 +1543,9 @@ body {
 							padding: 10px;
 							border-radius: 0;
 							padding-right: 25px;
+							background-image: url('/wp-content/themes/graphic-point-full-site/assets/images/chevron-export.png');
+							background-size: contain;
+							background-position: center;
 
 							@include media-breakpoint-up(sm) {
 								width: 202px;
@@ -1773,6 +1776,10 @@ body {
 								li.nav-item {
 									border-right: 1px solid white;
 									padding: 4px 5px;
+
+									&:last-of-type {
+										border-right: none;
+									}
 
 									@include media-breakpoint-up(lg) {
 										padding: 0 20px;
