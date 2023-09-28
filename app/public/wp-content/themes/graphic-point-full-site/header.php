@@ -30,7 +30,9 @@
 			<div class="container">
 
 				<button class="mobile-navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'graphic-point-full-site' ); ?>">
-					<i class="fa-sharp fa-solid fa-bars"></i>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
 				</button>
 
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

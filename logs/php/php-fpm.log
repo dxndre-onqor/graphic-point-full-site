@@ -97,3 +97,11 @@
 [18-Sep-2023 11:32:02] ERROR: FPM initialization failed
 [18-Sep-2023 11:32:03] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
 [18-Sep-2023 11:32:03] ERROR: FPM initialization failed
+[28-Sep-2023 15:25:01] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
+[28-Sep-2023 15:25:01] ERROR: FPM initialization failed
+[28-Sep-2023 15:25:02] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
+[28-Sep-2023 15:25:02] ERROR: FPM initialization failed
+[28-Sep-2023 15:25:03] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
+[28-Sep-2023 15:25:03] ERROR: FPM initialization failed
+[28-Sep-2023 15:25:03] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
+[28-Sep-2023 15:25:03] ERROR: FPM initialization failed
