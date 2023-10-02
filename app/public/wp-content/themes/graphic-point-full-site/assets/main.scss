@@ -2022,8 +2022,8 @@ body {
 
 							li {
 								display: block;
-								padding: 4px;
-								border: 2px solid white;
+								padding: 3px;
+								border: 3px solid white;
 								border-radius: 100%;
 								margin: 0 8px;
 								margin-top: 2px;
@@ -2421,9 +2421,10 @@ body {
 								img {
 									height: 100%;
 									width: auto;
+									object-fit: cover;
 
 									@include media-breakpoint-up(md) {
-										height: auto;
+										// height: auto;
 										width: 100%;
 									}
 								}
@@ -2433,10 +2434,11 @@ body {
 						.carousel-indicators {
 							li {
 								display: block;
-								padding: 5px;
+								padding: 3px;
 								border: 3px solid white;
 								border-radius: 100%;
-								margin: 0 5px;
+								margin: 0 8px;
+								height: 12px;
 								transition: 0.3s all ease;
 
 								&.active {
@@ -2449,6 +2451,7 @@ body {
 
 						&.carousel-fade {
 							.carousel-item {
+								height: 100%;
 								opacity: 0;
 								transition: opacity 0.5s ease-in-out;
 							}

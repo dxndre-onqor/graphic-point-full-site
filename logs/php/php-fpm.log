@@ -105,3 +105,5 @@
 [28-Sep-2023 15:25:03] ERROR: FPM initialization failed
 [28-Sep-2023 15:25:03] ERROR: Another FPM instance seems to already listen on /Users/dandrephillips/Library/Application Support/Local/run/Xvstx2RUL/php/php-fpm.socket
 [28-Sep-2023 15:25:03] ERROR: FPM initialization failed
+[02-Oct-2023 12:57:36] NOTICE: fpm is running, pid 24432
+[02-Oct-2023 12:57:36] NOTICE: ready to handle connections

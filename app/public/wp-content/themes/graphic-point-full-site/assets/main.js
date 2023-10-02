@@ -52,7 +52,7 @@ $(document).ready(function () {
 		slidesToShow: 1, 
 		speed: 2000,
 		infinite: true,
-		autoplaySpeed: 500,
+		autoplaySpeed: 1000,
 		autoplay: false,
 		cssEase: 'linear',
 		variableWidth: false,
