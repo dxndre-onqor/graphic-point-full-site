@@ -603,3 +603,30 @@ function enqueue_custom_styles() {
     wp_enqueue_style('slick-css', get_template_directory_uri() . '/css/slick/slick.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
+
+
+// Overrride Complianz Cookie Banner
+
+function cmplz_custom_banner_file($path, $filename){
+ if ($filename === 'cookiebanner.php' ) {
+   error_log("change path to ".trailingslashit(WPMU_PLUGIN_DIR).'cookiebanner/cookiebanner.php');
+   return trailingslashit(WPMU_PLUGIN_DIR).'cookiebanner/cookiebanner.php';
+ }
+ return $path;
+}
+
+add_filter('cmplz_template_file', 'cmplz_custom_banner_file', 10, 2);
+
+// Override Complianz Cookie Banner CSS
+
+function my_custom_banner_css($css){
+	ob_start();
+	//add css below
+	?>
+	.cmplz-cookiebanner {
+
+	}
+	<?php
+	return ob_get_clean();
+}
+add_filter('cmplz_cookiebanner_css', 'my_custom_banner_css');

@@ -52,17 +52,18 @@
                     echo '<option value="' . $enquiry_type['enquiry_type_title'] . '">' . $enquiry_type['enquiry_type_title'] . '</option>';
                 }
                 echo '</select>';
-
+            
                 // Create a container for the content
                 echo '<div id="content-container">';
-
+            
                 // Loop through the repeater field and display the content
                 foreach ($enquiry_types as $enquiry_type) {
-                    echo '<div class="enquiry-content" data-option="' . $enquiry_type['enquiry_type_title'] . '">';
+                    echo '<div class="enquiry-content" data-option="' . $enquiry_type['enquiry_type_title'] . '" data-make_default="' . ($enquiry_type['make_default'] ? 'true' : 'false') . '">';
+                    
                     echo do_shortcode($enquiry_type['contact_form_shortcode']);
                     echo '</div>';
                 }
-
+            
                 echo '</div>';
             endif;
             ?>

@@ -208,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', toggleMobileDropdown);
 });
 
-
 // Contact Form Tabs
 
 jQuery(document).ready(function ($) {
@@ -218,8 +217,24 @@ jQuery(document).ready(function ($) {
         
         // Hide all content
         $('.enquiry-content').hide();
-
+        
         // Show the selected content
         $('.enquiry-content[data-option="' + selectedOption + '"]').show();
     });
+
+    // Find the 'make_default' True/False field inside the repeater
+    var $defaultContent = $('.enquiry-content[data-option]').filter(function () {
+		var isDefault = $(this).data('make_default');
+		console.log('isDefault:', isDefault);
+		return isDefault === true;
+	});
+	
+
+    // If a default content section is found, show it
+    if ($defaultContent.length) {
+        $defaultContent.show();
+        var defaultOption = $defaultContent.data('option');
+        $('#enquiry-dropdown').val(defaultOption);
+    }
 });
+
