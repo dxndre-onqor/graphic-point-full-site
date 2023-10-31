@@ -107,3 +107,13 @@
 [28-Sep-2023 15:25:03] ERROR: FPM initialization failed
 [02-Oct-2023 12:57:36] NOTICE: fpm is running, pid 24432
 [02-Oct-2023 12:57:36] NOTICE: ready to handle connections
+[23-Oct-2023 11:36:10] NOTICE: Terminating ...
+[23-Oct-2023 11:36:10] NOTICE: Terminating ...
+[23-Oct-2023 11:36:10] NOTICE: exiting, bye-bye!
+[23-Oct-2023 13:07:06] NOTICE: fpm is running, pid 80174
+[23-Oct-2023 13:07:06] NOTICE: ready to handle connections
+[24-Oct-2023 15:35:45] NOTICE: Terminating ...
+[24-Oct-2023 15:35:45] NOTICE: Terminating ...
+[24-Oct-2023 15:35:45] NOTICE: exiting, bye-bye!
+[24-Oct-2023 15:35:57] NOTICE: fpm is running, pid 94810
+[24-Oct-2023 15:35:57] NOTICE: ready to handle connections

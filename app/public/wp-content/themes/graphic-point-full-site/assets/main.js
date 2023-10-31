@@ -207,3 +207,19 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleMobileDropdown(); // Initial check
     window.addEventListener('resize', toggleMobileDropdown);
 });
+
+
+// Contact Form Tabs
+
+jQuery(document).ready(function ($) {
+    // Handle the change event of the dropdown
+    $('#enquiry-dropdown').on('change', function () {
+        var selectedOption = $(this).val();
+        
+        // Hide all content
+        $('.enquiry-content').hide();
+
+        // Show the selected content
+        $('.enquiry-content[data-option="' + selectedOption + '"]').show();
+    });
+});

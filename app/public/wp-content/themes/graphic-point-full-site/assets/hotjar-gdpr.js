@@ -1,0 +1,1 @@
+console.log("Hotjar Script successfully loaded");

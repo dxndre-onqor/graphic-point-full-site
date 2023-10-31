@@ -43,6 +43,11 @@ if (have_rows('block_sections')) :
             <?php include 'blocks/contact.php'; ?>
         <?php endif;
 
+        // Case: Contact Type Section (takes the same format at the Contact Section but changes forms dependent on which option is selected).
+        if (get_row_layout() == 'contact_type_section') : ?>
+            <?php include 'blocks/contact-type.php'; ?>
+        <?php endif;
+
         // Case: Our Work Section.
         if (get_row_layout() == 'our_work_section') : ?>
             <?php include 'blocks/our-work.php'; ?>
